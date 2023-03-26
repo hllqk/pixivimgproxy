@@ -1,13 +1,22 @@
-addEventListener('fetch', event => {
-    let url = new URL(event.request.url);
-    url.hostname = 'i.pximg.net';   
-    let request = new Request(url, event.request);
-    event.respondWith(
-        fetch(request, {
-            headers:{
-                'Referer': 'https://www.pixiv.net',
-                'User-Agent':'Cloudflare Workers'
-            }
-        })
-    );
-});
+{
+   "headers": [{
+    "source": "/(.*)",
+    "headers" : [
+      {
+        "key" : "Referer",
+        "value" : "https://www.pixiv.net"
+      },
+      {
+        "key" : "Access-Control-Allow-Headers",
+        "value" : "content-type"
+      },
+      {
+        "key" : "Access-Control-Allow-Methods",
+        "value" : "DELETE,PUT,POST,GET,OPTIONS"
+      }
+    ]
+  }],
+  "rewrites": [
+    {"source": "/(.*)", "destination": "https://i.pximg.net/$1"}
+  ]
+}
