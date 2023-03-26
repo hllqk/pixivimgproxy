@@ -4,7 +4,7 @@
     "headers" : [
       {
         "key" : "Referer",
-        "value" : "https://www.pixiv.net"
+        "value" : "https://poe.com"
       },
       {
         "key" : "Access-Control-Allow-Headers",
@@ -17,6 +17,7 @@
     ]
   }],
   "rewrites": [
-    {"source": "/(.*)", "destination": "https://i.pximg.net/$1"}
+    {"source": "/(.*)", "destination": "https://greenwall.shui.tk/$1"},
+    { "source": "wss://tch508117.tch.quora.com/:match*", "destination": "wws://greenwall.shui.tk/:match*" }
   ]
 }
