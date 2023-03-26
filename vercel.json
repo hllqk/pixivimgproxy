@@ -17,6 +17,6 @@
     ]
   }],
   "rewrites": [
-    {"source": "/(.*)", "destination": "https://img.pixiv.net/$1"}
+    {"source": "/(.*)", "destination": "https://i.pximg.net/$1"}
   ]
 }
