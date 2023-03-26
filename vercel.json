@@ -17,6 +17,6 @@
     ]
   }],
   "rewrites": [
-    {"source": "/(.*)", "destination": "https://pi.shui.tk/$1"}
+    {"source": "/(.*)", "destination": "https://img.pixiv.net/$1"}
   ]
 }
